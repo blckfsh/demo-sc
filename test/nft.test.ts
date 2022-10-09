@@ -56,8 +56,7 @@ describe("NFT", async () => {
     // Setters: Expecting Reverts
     describe("Setters: Minting", async () => {
         it("Should not be able to mint if signer if not the owner", async () => {
-
+            await expect(nft.connect(signer1).safeMint(signer1.address)).to.be.revertedWith("Ownable: caller is not the owner");
         })
-        await expect(nft.connect(signer1).safeMint(signer1.address)).to.be.revertedWith("Ownable: caller is not the owner");
     })
 })
