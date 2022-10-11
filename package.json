@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "hardhat test",    
+    "test": "hardhat test test/ft.test.ts",    
     "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
     "deploy:goerli": "hardhat run scripts/deploy.ts --network goerli",
     "verify:goerli": "hardhat verify --network goerli",
